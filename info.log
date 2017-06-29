@@ -399,3 +399,5 @@
 {"purchasedQuantity":500,"purchasedUnitPrice":3,"purchasedBrokerCostsPercentage":2,"choice":"onlyBuy","level":"info","message":"","timestamp":"2017-06-29T18:24:36.297Z"}
 {"purchasedQuantity":500,"purchasedUnitPrice":3,"purchasedBrokerCostsPercentage":2,"choice":"onlyBuy","level":"info","message":"","timestamp":"2017-06-29T18:24:37.243Z"}
 {"purchasedQuantity":500,"purchasedUnitPrice":3,"purchasedBrokerCostsPercentage":2,"choice":"onlyBuy","level":"info","message":"","timestamp":"2017-06-29T18:24:37.778Z"}
+{"search":"crédit =>modulation du prêt:","capital":"83000","rate":"3.78","duration":300,"monthlyPayment":"428","choice":"monthly-payment","newMonthlyPayment":"400","newDuration":200,"ip":{"ip":"127.0.0.1","bogon":true},"level":"info","message":"","timestamp":"2017-06-29T20:20:55.727Z"}
+{"search":"crédit =>modulation du prêt:","capital":"83000","rate":"3.78","duration":300,"monthlyPayment":"428","choice":"monthly-payment","newMonthlyPayment":"400","newDuration":200,"ip":{"ip":"127.0.0.1","bogon":true},"level":"info","message":"","timestamp":"2017-06-29T20:22:34.970Z"}

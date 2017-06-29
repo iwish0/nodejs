@@ -18,7 +18,7 @@ const NumeralHelper = require("handlebars.numeral");
 NumeralHelper.registerHelpers(Handlebars);
 
 const server = new Hapi.Server();
-server.connection({ port: port, host: '127.0.0.1' });
+server.connection({ port: port, host: 'localhost' });
 
 winston.configure({
     transports: [

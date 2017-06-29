@@ -2,9 +2,11 @@
   "name": "back-end-application",
   "version": "1.0.0",
   "description": "nodejs-back-end",
-  "main": "server.js",
+  "engines": {
+    "node": "6"
+  },
   "scripts": {
-    "test": "Hello World"
+    "start": "node --harmony server.js"
   },
   "author": "",
   "license": "ISC",

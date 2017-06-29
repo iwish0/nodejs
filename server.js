@@ -1,6 +1,7 @@
 'use strict';
 
 const Hapi = require('hapi'); // nodejs framework
+var port = process.env['PORT'] || 8080;
 const LoanSimulation=require('./Entity/loan/LoanSimulation.js');
 const RateRenegociationSimulation=require('./Entity/loan/RateRenegociationSimulation.js');
 const PartiallyPaybackSimulation=require('./Entity/loan/PartiallyPaybackSimulation.js');
@@ -17,7 +18,7 @@ const NumeralHelper = require("handlebars.numeral");
 NumeralHelper.registerHelpers(Handlebars);
 
 const server = new Hapi.Server();
-server.connection({ port: 8080, host: '127.0.0.1' }); //3000 'localhost'
+server.connection({ port: port, host: '127.0.0.1' });
 
 winston.configure({
     transports: [

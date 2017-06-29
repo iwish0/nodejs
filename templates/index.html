@@ -1,0 +1,127 @@
+  <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Tableau d'amortissement</title>
+               <style>
+        
+          body { font-family:arial, DejaVu Sans;
+                  margin-top: 0px;
+           }
+            table {
+        
+    border-collapse: collapse;
+    width:100%;
+    margin-top:24px;
+}
+
+table{
+    border: 1px solid  #444444;
+}
+td{
+    padding-left: 10px;
+    padding-top:4px;
+}
+.border-right{
+    border-right: 1px solid #444444;    
+}
+th{
+    font-weight: normal; 
+}
+.span{
+    letter-spacing: 1px;
+    font-weight: bold;
+    color:#333333;
+    margin-right:5px;
+    font-size:9px;
+}
+.divStyle{
+  margin-top: 4px;
+}
+
+        </style>
+    </head>
+    <body style="font-size: 10px;">
+        <div>
+            <div style="background-color:#00B3C5;padding:8px 20px 7px 20px;margin:0px -15px 20px -15px;">
+                <span style="color:white;letter-spacing: 1px;font-size:12px;font-weight:bold;">combiencamefait.fr</span>
+            </div>
+  <div style="text-align:center;">
+    <h1 style="text-align:center;font-size:12px;background-color:rgb(128,128,128);color:#fff;padding:5px;width:70%;margin:auto;margin-bottom:10px;">Tableau d'amortissement</h1>
+    <span style="color:#444444;font-size:11px;">( Le résultat de cette simulation est donné à titre purement indicatif. )</span>
+  </div>
+    <div style="text-align:center;background-color:#99004d;color:#fff;padding:5px;margin-top:15px;font-size:12px;">{{labelSimulation}}</div>
+          <div style="margin-top:15px;">
+            <span class="span">{{capitalLabel }}: </span><span style="letter-spacing:1px;font-size:9px;">{{number capital}} €</span>  
+          </div>
+
+           {{#if newRate}}       
+            <div class="divStyle">
+              <span class="span">Nouveau taux: </span><span  style="letter-spacing:1px;">{{number newRate }} %</span>
+              <span class="span">( Ancien taux: </span><span  style="letter-spacing:1px;font-size:9px;">{{number previousRate }} % )</span>  
+            </div>
+          {{/if}}
+
+          <div class="divStyle">
+            <span class="span">Mensualité: </span><span style="letter-spacing:1px;font-size: 9px;">{{number monthlyPayment}} €</span>
+          </div>
+          
+          {{#if monthlyPaymentDecrease }}
+            <div class="divStyle">
+              <span class="span">Diminution de la mensualité de: </span><span style="letter-spacing:1px;font-size: 9px;">{{number monthlyPaymentDecrease}} €</span>
+            </div>          
+          {{/if}}
+            
+          <div class="divStyle">
+            <span class="span">Durée: </span><span  style="letter-spacing:1px;font-size: 9px;">{{durationOnString}}</span>
+          </div>
+
+          {{#if durationDecrease}}
+            <div class="divStyle">
+              <span class="span">Diminution de la durée de: </span><span  style="letter-spacing:1px;font-size: 9px;">{{durationDecreaseOnString}}</span>
+            </div>
+          {{/if}}
+          
+          {{#if rate }}
+             <div class="divStyle">
+              <span class="span">Taux: </span><span  style="letter-spacing:1px;font-size: 9px;">{{number rate }} %</span>  
+            </div>
+          {{/if}}
+          <div class="divStyle">
+            <span class="span">Intérêts: </span><span  style="letter-spacing:1px;font-size: 9px;">{{number totalInterest}} €</span>
+          </div>
+          <div class="divStyle">
+            {{#if totalAmount }}
+              <span class="span">Montant remboursé: </span><span  style="letter-spacing:1px;font-size: 9px;">{{number totalAmount}} €</span>
+             {{/if}}
+             {{#if totalInterestGain }}
+              <span class="span">Gain réalisé: </span><span  style="letter-spacing:1px;font-size: 9px;">{{number totalInterestGain }} €</span>
+             {{/if}}
+          </div>
+        
+        <div>
+        <table>
+          <tr style="border-bottom:1px solid #444444;">
+            <th class="border-right">Echéance</th>
+            <th class="border-right">Mensualité</th>
+            <th class="border-right">Intérêts</th>
+            <th class="border-right">Amortissements</th>
+            <th>Capital restant dû</th>
+          </tr>
+          {{#each amortizationSchedule }}
+          <tr>
+            <td class="border-right">{{index}}</td>
+            <td class="border-right">{{number monthlyPayment}} </td>
+            <td class="border-right">{{number interest}} </td>
+            <td class="border-right">{{number amortization}} </td>
+           
+              <td>{{number remainingCapital}} </td> 
+           
+          </tr>
+          {{/each}}
+        </table>
+        </div>
+   </div>
+      
+    </body>
+</html>

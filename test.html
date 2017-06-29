@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Tableau d'amortissement{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <style>
+        
+          body { font-family: DejaVu Sans; }
+            table {
+        
+    border-collapse: collapse;
+    width:100%;
+    margin-top:24px;
+}
+
+table{
+    border: 1px solid black;
+}
+td{
+    padding-left: 10px;
+}
+.border-right{
+    border-right: 1px solid black;    
+}
+th{
+    font-weight: normal; 
+}
+.span{
+    letter-spacing: 1px;
+    font-weight: bold;
+    color:#333333;
+    margin-right:5px;
+}
+
+        </style>
+    </head>
+    <body style="font-size: 12px;">
+        <div>
+            <div style="background-color:#00B3C5;padding:10px;margin-bottom:20px;">
+                <span style="color:white;letter-spacing: 1px;font-size:16px;font-weight:bold;">combiencamefait.fr</span>
+            </div>
+            {% block body %}{% endblock %}
+        </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

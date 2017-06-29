@@ -1,0 +1,23 @@
+{
+  "name": "back-end-application",
+  "version": "1.0.0",
+  "description": "nodejs-back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "Hello World"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.0.10",
+    "handlebars.numeral": "^0.2.0",
+    "hapi": "^16.4.3",
+    "hapi-geo-locate": "^2.2.0",
+    "html-pdf": "^2.1.0",
+    "inert": "^4.2.0",
+    "mongodb": "^2.2.29",
+    "nodemailer": "^4.0.1",
+    "vision": "^4.1.1",
+    "winston": "^2.3.1"
+  }
+}
